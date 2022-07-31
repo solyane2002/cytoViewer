@@ -1,29 +1,28 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import Cytoscape from "cytoscape";
 import CytoscapeComponent from "react-cytoscapejs";
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
 class GraphViewer extends React.Component {
-    static propTypes = {
-        onTapped: PropTypes.func,
-      }
+  static propTypes = {
+    onTapped: PropTypes.func,
+  };
 
   initListeners() {
-    if (this.props.onTapped){
-        this.cy.on("tap", "node", (evt) => {
-            this.props.onTapped(evt.target)
-          });
-    }    
+    if (this.props.onTapped) {
+      this.cy.on("tap", "node", (evt) => {
+        this.props.onTapped(evt.target);
+      });
+    }
   }
-  
+
   componentWillUnmount() {
-    console.log("remove listeners");
     if (this.cy) {
       this.cy.removeAllListeners();
     }
   }
   render() {
- 
     const elements = [
       { data: { id: "cat", label: "cat" } },
       { data: { id: "bird", label: "bird" } },
@@ -57,7 +56,7 @@ class GraphViewer extends React.Component {
             selector: "node",
             style: {
               "background-color": "#282",
-             // label: "data(label)",
+              // label: "data(label)",
             },
           },
           {

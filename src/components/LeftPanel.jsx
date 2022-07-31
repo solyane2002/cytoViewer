@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-const LeftPanel = () =>  (
-    <div className="left-panel">
-     <h2>LeftPanel</h2>
-    </div>
-  )
+const LeftPanel = () => (
+  <div className="left-panel">
+    <h2>LeftPanel</h2>
+  </div>
+);
 
-export default LeftPanel
+export default LeftPanel;

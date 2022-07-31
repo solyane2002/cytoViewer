@@ -1,19 +1,18 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import GraphViewer from "./GraphViewer";
 import LabelPanel from "./LabelPanel";
 
 const MainViewer = () => {
-
-  const [label, setLabel] = useState(""); 
+  const [label, setLabel] = useState("");
 
   const tappedNodeHandler = (node) => {
-    setLabel(node.id())
+    setLabel(node.id());
   };
 
   return (
     <div className="main-viewer">
       <GraphViewer onTapped={tappedNodeHandler} />
-      <LabelPanel label={label}/>
+      <LabelPanel label={label} />
     </div>
   );
 };

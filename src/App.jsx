@@ -1,16 +1,13 @@
+import "./App.css";
 
-import './App.css'
+import LeftPanel from "./components/LeftPanel";
+import RightPanel from "./components/RightPanel";
 
-import LeftPanel from './components/LeftPanel';
-import RightPanel from './components/RightPanel';
-
-function App() {
-  return (
-    <div className='main-container'>
-      <LeftPanel />
-      <RightPanel/>
-    </div>
-  );
-}
+const App = () => (
+  <div className="main-container">
+    <LeftPanel />
+    <RightPanel />
+  </div>
+);
 
 export default App;
